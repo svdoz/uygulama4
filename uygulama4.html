@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Uygulama 4 || Random Yorum Köşesi </title>
+
+
+            <style>
+#div1{
+
+            width: 16%;
+            height: 150px;
+            position: relative;
+            top: 100px;
+            left: 25%;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3%;
+
+
+}
+#div2{
+
+           width: 100%;
+           height: 100px;
+           background-color: rgb(207, 60, 60);
+           color: white;
+           text-align: center;
+
+
+}
+#div3{
+
+            width: 100%;
+            height: 50px;
+            background-color: rgb(216, 91, 91);
+            opacity: 0.7;
+            color: white;
+            text-align: center;
+
+
+
+}
+
+
+
+
+
+            </style>
+</head>
+<body>
+<div id="div1">
+<div id="div2">
+
+</div>
+<!-- div2 yorumların yazılacağı div. 
+div3 isimlerin yazılacağı div. -->
+<div id="div3">
+
+</div>
+
+
+
+</div>
+            
+
+
+            <script>
+
+var a = [ { yorum : "İlk günden beri takipteyim, herkese tavsiye ederim.", isim : "Doruk Akgül"},
+{ yorum : "Oldukça başarılı bir ürün, ilk günden etkisi hissediliyor.", isim : "Samet Özbilek"},
+{ yorum : "Keinlikle bu ürünü herkese tavsiye edeceğim.", isim : "Sevda Özbilek"},
+{ yorum : "Genç yaşlı herkesin rahatlıkla kullanabileceğii bir ürün.", isim : "Taha Batu"}
+]
+
+
+// Değişkeni setInterval da kullancağımız için fonksiyonun dışında tanımlamamız gerekiyor aksi halde sıkıntı çıkar.
+
+
+var random ;
+function sayiUret() {
+
+random = Math.round(Math.random() * 3) ;
+
+
+//  3 dediğimiz index sayısı
+
+
+
+}
+
+setInterval (function () {
+            sayiUret();
+
+document.getElementById("div2").innerHTML = a[random].yorum ;
+// Bunlar obje olduğu için hangi objeye ulasmak istiyorsam nokta diyip yazmam lazım.Mesela yukarıda yorum objesine ulasmak istediğim için .yorum dedik 
+
+document.getElementById("div3").innerHTML = a[random].isim ;
+
+
+},2000) ;
+
+
+
+
+
+
+            </script>
+</body>
+</html>
